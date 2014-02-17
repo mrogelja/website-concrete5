@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import "compass/css3";
+@import "vars";
+
+body {
+  position: relative;
+  background: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+.top-bar {
+  .name h1 a {
+    color: #C45357;
+  }
+
+  .top-bar-section {
+    .left{
+      margin-left: 100px;
+    }
+
+    .important a{
+      color: #992b2f;
+    }
+
+    .search{
+      display: table;
+      width: 400px;
+
+      form{
+        display: table-cell;
+        vertical-align: middle;
+
+        input{
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+header{
+  background: #C45357;
+  height: 200px;
+}
+
+
+section#main{
+  background: #fafafa;
+  min-height: 800px;
+  padding: 20px 50px;
+
+  .search-results{
+    h4{
+      text-align: center;
+    }
+  }
+}
+
+footer{
+  height: 100px;
+  background: #444;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
