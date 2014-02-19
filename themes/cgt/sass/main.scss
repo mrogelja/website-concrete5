@@ -10,6 +10,7 @@ body {
 }
 
 .top-bar {
+  overflow: hidden;
   .name h1 a {
     color: #C45357;
   }
@@ -41,7 +42,7 @@ body {
 
 header{
   background: #C45357;
-  height: 200px;
+  height: 100px;
 }
 
 
@@ -53,6 +54,29 @@ section#main{
   .search-results{
     h4{
       text-align: center;
+    }
+  }
+
+  .ccm-page-list{
+    .page{
+      margin-bottom: 30px;
+    }
+  }
+
+  .rss{
+    .item{
+      margin: 20px 0;
+
+      .date{
+        color: grey;
+        font-size: 13px;
+        width: 35px;
+      }
+
+      .summary{
+        margin-top: 10px;
+        padding-left: 35px;
+      }
     }
   }
 }

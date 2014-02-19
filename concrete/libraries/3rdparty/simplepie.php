@@ -3964,6 +3964,13 @@ class SimplePie_File
 				curl_setopt($fp, CURLOPT_REFERER, $url);
 				curl_setopt($fp, CURLOPT_USERAGENT, $useragent);
 				curl_setopt($fp, CURLOPT_HTTPHEADER, $headers2);
+
+                if (defined('HTTP_PROXY')) {
+                    curl_setopt($fp, CURLOPT_PROXY, HTTP_PROXY);
+                    curl_setopt($fp, CURLOPT_PROXYPORT, HTTP_PROXY_PORT);
+                }
+
+
 				if (!ini_get('open_basedir') && !ini_get('safe_mode') && version_compare(SimplePie_Misc::get_curl_version(), '7.15.2', '>='))
 				{
 					curl_setopt($fp, CURLOPT_FOLLOWLOCATION, 1);

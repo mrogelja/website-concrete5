@@ -12,6 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.top-bar {
+  overflow: hidden;
+}
 .top-bar .name h1 a {
   color: #C45357;
 }
@@ -35,7 +38,7 @@ body {
 
 header {
   background: #C45357;
-  height: 200px;
+  height: 100px;
 }
 
 section#main {
@@ -45,6 +48,21 @@ section#main {
 }
 section#main .search-results h4 {
   text-align: center;
+}
+section#main .ccm-page-list .page {
+  margin-bottom: 30px;
+}
+section#main .rss .item {
+  margin: 20px 0;
+}
+section#main .rss .item .date {
+  color: grey;
+  font-size: 13px;
+  width: 35px;
+}
+section#main .rss .item .summary {
+  margin-top: 10px;
+  padding-left: 35px;
 }
 
 footer {

@@ -1,6 +1,7 @@
 @import "foundation/functions";
 
 $rem-base: 16px;
+$column-gutter: rem-calc(50);
 
 //We use these to control various global styles
 $body-bg: #fff;
@@ -30,7 +31,7 @@ $topbar-bg: #fff;
 $topbar-bg-color: #444;
 
 /* Height and margin */
-$topbar-height: 90px;
+$topbar-height: 70px;
 $topbar-margin-bottom: 0;
 
 /* Control Input height for top bar */
@@ -53,7 +54,7 @@ $topbar-link-color: #666;
 $topbar-link-color-hover: #111;
 $topbar-link-color-active: #111;
 $topbar-link-weight: normal;
-$topbar-link-font-size: rem-calc(20);
+$topbar-link-font-size: rem-calc(16);
 $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg-hover: #fff  ;
 $topbar-link-bg-active: #fff;
