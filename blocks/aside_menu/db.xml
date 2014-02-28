@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btAsideMenu">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+        <field name="title" type="C" size="255">
+            <default value="Menu" />
+        </field>
+		<field name="isSticky" type="I1">
+			<unsigned />
+            <default value="1" />
+		</field>
+	</table>
+</schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btCalendar">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+        <field name="testID" type="X2">
+            <default value="1" />
+        </field>
+	</table>
+</schema>

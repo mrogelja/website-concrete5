@@ -50,6 +50,17 @@
 </nav>
 
 <header class="header">
+    <?php
+    $a = new Area('En tête');
+    $a->display($c);
+    ?>
 </header>
+
+<nav class="breadcrumbs">
+    <?
+        $nav = BlockType::getByHandle('swp_breadcrumbs');
+        $nav->render('view');
+    ?>
+</nav>
 
 <section id="main">

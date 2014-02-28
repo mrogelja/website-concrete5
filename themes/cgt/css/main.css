@@ -6,6 +6,8 @@
 /* Set the link colors and styles for top-level nav */
 /* Top menu icon styles */
 /* Divider Styles */
+/* Magelan */
+/* Breadcrumbs */
 body {
   position: relative;
   background: white;
@@ -41,6 +43,16 @@ header {
   height: 100px;
 }
 
+nav.breadcrumbs {
+  height: 35px;
+  line-height: 35px;
+  background: #444;
+  padding-left: 20px;
+}
+nav.breadcrumbs, nav.breadcrumbs a {
+  color: #ededed;
+}
+
 section#main {
   background: #fafafa;
   min-height: 800px;
@@ -64,6 +76,13 @@ section#main .rss .item .summary {
   margin-top: 10px;
   padding-left: 35px;
 }
+section#main .aside-menu.fixed {
+  top: 50px !important;
+  left: auto !important;
+}
+section#main .aside-menu.fixed ul {
+  max-width: 200px;
+}
 
 footer {
   height: 100px;
@@ -71,4 +90,9 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+.ccm-ui select, .ccm-ui input {
+  line-height: normal;
+  height: 28px;
 }
