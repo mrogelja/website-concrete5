@@ -5,8 +5,7 @@
 			<key />
 			<unsigned />
 		</field>
-        <field name="testID" type="X2">
-            <default value="1" />
+        <field name="events" type="X2">
         </field>
 	</table>
 </schema>

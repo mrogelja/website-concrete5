@@ -46,9 +46,9 @@
 				echo $akct;
 				echo '",';
 				} ?>];
-		$( "#suggest" ).autocomplete({
-			source: availableTags
-		});
+//		$( "#suggest" ).autocomplete({
+//			source: availableTags
+//		});
 	});
 	</script> 
   </script>

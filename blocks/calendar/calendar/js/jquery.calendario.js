@@ -163,11 +163,15 @@
 							dayData = this.caldata[ strdate ];
 
 						if( dayData ) {
-							content = dayData;
+              var hour;
+
+              for (hour in dayData) {
+                content += '<div class="fc-event" data-event><span class="fc-event-hour" data-hour>' + hour + '</span><span class="fc-event-data" data-event-data>' + dayData[hour] + '</span></div>';
+              }
 						}
 
 						if( content !== '' ) {
-							inner += '<div>' + content + '</div>';
+							inner += '<div class="fc-events" data-events="'+ strdate +'">' + content + '</div>';
 						}
 
 						++day;

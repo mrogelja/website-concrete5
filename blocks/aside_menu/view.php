@@ -2,7 +2,6 @@
 
 $page = Page::getCurrentPage();
 
-$fp = new Permissions($f);
 $anchors = array();
 
 foreach ($page->getBlocks() as $block) {
@@ -24,7 +23,7 @@ foreach ($page->getBlocks() as $block) {
     }
 }
 
-if ($fp->canViewFile() and !empty($anchors)) : ?>
+if (!empty($anchors)) : ?>
     <div class="aside-menu hide-for-small" <? if ($this->controller->isSticky()) : ?>data-magellan-expedition="fixed"<? endif ?>>
         <? if (!empty($this->controller->getTitle())) : ?>
         <h6><?= $this->controller->getTitle()?></h6>

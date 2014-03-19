@@ -8,10 +8,6 @@ class AsideMenuBlockController extends BlockController
 {
 
     protected $btInterfaceWidth = 600;
-    protected $btCacheBlockRecord = true;
-    protected $btCacheBlockOutput = true;
-    protected $btCacheBlockOutputOnPost = true;
-    protected $btCacheBlockOutputForRegisteredUsers = true;
     protected $btInterfaceHeight = 250;
     protected $btTable = 'btAsideMenu';
 
@@ -33,7 +29,6 @@ class AsideMenuBlockController extends BlockController
     }
 
     public function getTitle() {
-
         return $this->title;
     }
 }

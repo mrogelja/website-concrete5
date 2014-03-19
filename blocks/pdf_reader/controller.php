@@ -8,11 +8,13 @@ class PdfReaderBlockController extends BlockController
 {
 
     protected $btInterfaceWidth = 600;
+    protected $btInterfaceHeight = 250;
+
     protected $btCacheBlockRecord = true;
     protected $btCacheBlockOutput = true;
     protected $btCacheBlockOutputOnPost = true;
     protected $btCacheBlockOutputForRegisteredUsers = true;
-    protected $btInterfaceHeight = 250;
+
     protected $btTable = 'btPdfReader';
 
     protected $btExportFileColumns = array('fID');
