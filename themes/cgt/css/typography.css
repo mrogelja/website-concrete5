@@ -186,12 +186,12 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #c45357;
+  color: #e2353b;
   text-decoration: none;
   line-height: inherit;
 }
 a:hover, a:focus {
-  color: #bd4145;
+  color: #de2026;
 }
 a img {
   border: none;

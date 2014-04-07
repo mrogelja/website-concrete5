@@ -15,7 +15,9 @@
 <nav class="top-bar" data-topbar>
     <ul class="title-area">
         <li class="name">
-            <h1><a href="<?= $this->url('/') ?>">CGT Ina</a></h1>
+            <a href="<?= $this->url('/') ?>">
+                <img height="100px" src="<?= $this->getThemePath(); ?>/img/Logo-cgt.png"/>
+            </a>
         </li>
     </ul>
     <section class="top-bar-section">

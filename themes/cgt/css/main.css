@@ -14,15 +14,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.top-bar {
-  overflow: hidden;
-}
-.top-bar .name h1 a {
-  color: #C45357;
-}
-.top-bar .top-bar-section .left {
-  margin-left: 100px;
-}
 .top-bar .top-bar-section .important a {
   color: #992b2f;
 }
@@ -39,8 +30,8 @@ body {
 }
 
 header {
-  background: #C45357;
-  height: 100px;
+  background: #e2353b;
+  height: 77px;
 }
 
 nav.breadcrumbs {

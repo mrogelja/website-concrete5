@@ -10,16 +10,8 @@ body {
 }
 
 .top-bar {
-  overflow: hidden;
-  .name h1 a {
-    color: #C45357;
-  }
 
   .top-bar-section {
-    .left{
-      margin-left: 100px;
-    }
-
     .important a{
       color: #992b2f;
     }
@@ -41,8 +33,8 @@ body {
 }
 
 header{
-  background: #C45357;
-  height: 100px;
+  background: #e2353b;
+  height: 77px;
 }
 
 nav.breadcrumbs{
