@@ -13,7 +13,12 @@ body {
 
   .top-bar-section {
     .important a{
-      color: #992b2f;
+      color: #e2353b;
+    }
+
+    .left{
+      padding-left: 5px;
+      border-left: 4px #FC5050 solid
     }
 
     .search{
@@ -35,6 +40,7 @@ body {
 header{
   background: #e2353b;
   height: 77px;
+  border-top: 4px #FC5050 solid;
 }
 
 nav.breadcrumbs{

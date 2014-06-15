@@ -15,7 +15,11 @@ body {
 }
 
 .top-bar .top-bar-section .important a {
-  color: #992b2f;
+  color: #e2353b;
+}
+.top-bar .top-bar-section .left {
+  padding-left: 5px;
+  border-left: 4px #fc5050 solid;
 }
 .top-bar .top-bar-section .search {
   display: table;
@@ -32,6 +36,7 @@ body {
 header {
   background: #e2353b;
   height: 77px;
+  border-top: 4px #FC5050 solid;
 }
 
 nav.breadcrumbs {
