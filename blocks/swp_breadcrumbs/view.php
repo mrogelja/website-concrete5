@@ -3,5 +3,7 @@
 <?
     foreach(array_slice($this->controller->getSubLevels(), 1) as $p) :
 ?>
-    <a href="<?= $p["link"] !== false ? $p["link"] : "#" ?>"><?= $p["title"] ?></a>
+    <li>
+        <a href="<?= $p["link"] !== false ? $p["link"] : "#" ?>"><?= $p["title"] ?></a>
+    </li>
 <? endforeach; ?>

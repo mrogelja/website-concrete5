@@ -70,10 +70,12 @@
 </header>
 
 <nav class="breadcrumbs">
-    <?
-    $nav = BlockType::getByHandle('swp_breadcrumbs');
-    $nav->render('view');
-    ?>
+    <ol class="breadcrumb">
+        <?
+        $nav = BlockType::getByHandle('swp_breadcrumbs');
+        $nav->render('view');
+        ?>
+    </ol>
 </nav>
 
 <section id="main">
