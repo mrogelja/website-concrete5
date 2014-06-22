@@ -128,8 +128,10 @@ header nav.externals {
   background: #EEEEEE;
 }
 header nav.externals a {
-  line-height: 30px;
+  line-height: 28px;
   color: #666;
+  font-size: 13px;
+  padding: 0 15px;
 }
 
 nav.breadcrumbs {

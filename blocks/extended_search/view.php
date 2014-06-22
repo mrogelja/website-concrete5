@@ -58,8 +58,8 @@
 <?php    } ?><?php    echo $content; ?>
 
 <?php if (!isset($searchBarRenderedOnce)) : ?>
-<form action="<?php   echo $this->url( $resultTargetURL )?>" method="get" class="ccm-search-block-form">
-
+<form action="<?php   echo $this->url( $resultTargetURL )?>" method="get" class="navbar-form ccm-search-block-form">
+    <div class="form-group">
 	<?php    if( strlen($title)>0){ ?><h3><?php   echo $title?></h3><?php    } ?>
 	
 	<?php    if(strlen($query)==0){ ?>
@@ -71,6 +71,7 @@
 	} ?>
 	
 	<input name="query" type="search" value="<?php   echo htmlentities($query, ENT_COMPAT, APP_CHARSET)?>" class="form-control ccm-search-block-text" id="suggest" placeholder="<?php  echo $searchPlaceholder;?>"/>
+    </div>
 </form>
 <?php endif ?>
 
@@ -81,7 +82,7 @@ $tt = Loader::helper('text');
 
 if ($do_search) {
 	if(count($results)==0){ ?>
-		<h4 style="margin-top:32px"><?php   echo t('There were no results found. Please try another keyword or phrase.')?></h4>
+		<p> Désolé, aucun résultat ne correspond à votre recherche </p>
 	<?php    }else{ ?>
 		<div id="searchResults">
 		<?php    foreach($results as $r) { 
@@ -108,7 +109,9 @@ if ($do_search) {
 
 	<?php   				
 	} //results found
-} 
-?>
+} else { ?>
+    <p> Désolé, aucun résultat ne correspond à votre recherche </p>
+<?}?>
 </div>
+
 <?php endif ?>

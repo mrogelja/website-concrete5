@@ -44,18 +44,16 @@
             </div>
 
             <div class="navbar-collapse collapse" id="navbar-collapse">
-                <form class="navbar-form" role="search">
-                    <div class="form-group">
-                        <?
-                        $search = BlockType::getByHandle('extended_search');
-                        $search->controller->title = '';
-                        $search->controller->searchPlaceholder = 'Rechercher...';
-                        $search->controller->resultsURL = 'recherche';
-                        $search->controller->dontDisplayResults = true;
-                        $search->render('view');
-                        ?>
-                    </div>
-                </form>
+
+                <?
+                $search = BlockType::getByHandle('extended_search');
+                $search->controller->title = '';
+                $search->controller->searchPlaceholder = 'Rechercher...';
+                $search->controller->resultsURL = 'recherche';
+                $search->controller->dontDisplayResults = true;
+                $search->render('view');
+                ?>
+
                 <ul class="nav navbar-nav navbar-right">
                     <?
                     $nav = BlockType::getByHandle('autonav');
