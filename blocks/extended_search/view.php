@@ -63,14 +63,24 @@
 	<?php    if( strlen($title)>0){ ?><h3><?php   echo $title?></h3><?php    } ?>
 	
 	<?php    if(strlen($query)==0){ ?>
-	<input name="search_paths[]" type="hidden" value="<?php   echo htmlentities($baseSearchPath, ENT_COMPAT, APP_CHARSET) ?>" />
-	<?php    } else if (is_array($_REQUEST['search_paths'])) { 
+
+
+
+        <input name="search_paths[]" type="hidden" value="<?php   echo htmlentities($baseSearchPath, ENT_COMPAT, APP_CHARSET) ?>" />
+
+
+	<?php    } else if (is_array($_REQUEST['search_paths'])) {
 		foreach($_REQUEST['search_paths'] as $search_path){ ?>
 			<input name="search_paths[]" type="hidden" value="<?php   echo htmlentities($search_path, ENT_COMPAT, APP_CHARSET) ?>" />
 	<?php     }
 	} ?>
-	
-	<input name="query" type="search" value="<?php   echo htmlentities($query, ENT_COMPAT, APP_CHARSET)?>" class="form-control ccm-search-block-text" id="suggest" placeholder="<?php  echo $searchPlaceholder;?>"/>
+
+        <div class="input-group">
+            <input name="query" type="search" value="<?php   echo htmlentities($query, ENT_COMPAT, APP_CHARSET)?>" class="form-control ccm-search-block-text" id="suggest" placeholder="<?php  echo $searchPlaceholder;?>"/>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-search " type="button"></span>
+            </span>
+        </div>
     </div>
 </form>
 <?php endif ?>
