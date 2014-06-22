@@ -223,8 +223,6 @@ foreach ($navItems as $ni) {
  * DESIGNERS: CUSTOMIZE THE HTML STARTING HERE...
  */
 
-echo '<ul class="left">'; //opens the top-level menu
-
 foreach ($navItems as $ni) {
     echo '<li class="' . $ni->classes . '">'; //opens a nav item
 
@@ -241,5 +239,3 @@ foreach ($navItems as $ni) {
         echo str_repeat('</ul></li>', $ni->subDepth); //closes dropdown sub-menu(s) and their top-level nav item(s)
     }
 }
-
-echo '</ul>'; //closes the top-level menu

@@ -1,0 +1,130 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop: $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+h1 {
+  font-size: 4rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #444;
+}
+
+.navbar {
+  min-height: 130px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-collapse {
+  box-shadow: none;
+}
+
+.navbar-brand {
+  height: 130px;
+  text-align: center;
+
+  @media (max-width: $screen-md-min) {
+    width: 100%;
+  }
+
+  .logo span {
+    color: #FFF;
+    margin-top: 0px;
+    font-size: 32px;
+    display: block;
+  }
+}
+
+.navbar-form{
+  text-align: right;
+  margin: 20px -15px;
+}
+
+.navbar-toggle{
+  position: absolute;
+  right: 0;
+}
+
+.navbar-default {
+  background: $primary-color;
+  border: 0;
+  border-bottom: 4px $secondary-color solid;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #FFF;
+  font-size: 1.7rem;
+  line-height: 20px;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #fafafa;
+  border-radius: 2px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: $secondary-color;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FFF;
+  background-color: transparent;
+  border-bottom: 3px solid $secondary-color;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border: none;
+}
+
+.navbar-collapse{
+  li{
+    text-align: center;
+  }
+}

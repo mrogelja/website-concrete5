@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
 /* Background color for the top bar */
 /* Height and margin */
 /* Control Input height for top bar */
@@ -8,35 +10,126 @@
 /* Divider Styles */
 /* Magelan */
 /* Breadcrumbs */
+h1 {
+  font-size: 4rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #444;
+}
+
+.navbar {
+  min-height: 130px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-collapse {
+  box-shadow: none;
+}
+
+.navbar-brand {
+  height: 130px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .navbar-brand {
+    width: 100%;
+  }
+}
+.navbar-brand .logo span {
+  color: #FFF;
+  margin-top: 0px;
+  font-size: 32px;
+  display: block;
+}
+
+.navbar-form {
+  text-align: right;
+  margin: 20px -15px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  right: 0;
+}
+
+.navbar-default {
+  background: #e2353b;
+  border: 0;
+  border-bottom: 4px #fc5050 solid;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #FFF;
+  font-size: 1.7rem;
+  line-height: 20px;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #fafafa;
+  border-radius: 2px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #fc5050;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FFF;
+  background-color: transparent;
+  border-bottom: 3px solid #fc5050;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border: none;
+}
+
+.navbar-collapse li {
+  text-align: center;
+}
+
 body {
   position: relative;
   background: white;
   -webkit-font-smoothing: antialiased;
+  font-family: "Cabin";
 }
 
-.top-bar .top-bar-section .important a {
+a {
   color: #e2353b;
 }
-.top-bar .top-bar-section .left {
-  padding-left: 5px;
-  border-left: 4px #fc5050 solid;
+
+h1, h2 {
+  margin-bottom: 30px;
 }
-.top-bar .top-bar-section .search {
-  display: table;
-  width: 400px;
-}
-.top-bar .top-bar-section .search form {
-  display: table-cell;
-  vertical-align: middle;
-}
-.top-bar .top-bar-section .search form input {
-  top: 0;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
 }
 
 header {
-  background: #e2353b;
-  height: 77px;
-  border-top: 4px #FC5050 solid;
+  font-family: 'Roboto Slab', serif;
+}
+header nav.externals {
+  height: 30px;
+  background: #EEEEEE;
+}
+header nav.externals a {
+  line-height: 30px;
+  color: #666;
 }
 
 nav.breadcrumbs {
@@ -72,20 +165,42 @@ section#main .rss .item .summary {
   margin-top: 10px;
   padding-left: 35px;
 }
-section#main .aside-menu.fixed {
+section#main .aside-menu h6 {
+  font-size: 18px;
+  border-bottom: 2px solid #DDD;
+  padding-bottom: 7px;
+  color: #888;
+}
+section#main .aside-menu.affix {
   top: 50px !important;
   left: auto !important;
 }
-section#main .aside-menu.fixed ul {
+section#main .aside-menu.affix ul {
   max-width: 200px;
 }
+section#main .aside-menu li {
+  border-left: 2px solid transparent;
+}
+section#main .aside-menu li.active {
+  border-left-color: #AAA;
+}
+section#main .aside-menu li a {
+  color: #AAA;
+  font-size: 1.5rem;
+  padding: 6px 15px;
+}
 
-footer {
+footer .upper {
+  min-height: 250px;
+  background: #EEEEEE;
+  padding: 20px;
+  color: #888;
+}
+footer .lower {
   height: 100px;
   background: #444;
   color: white;
   padding: 20px;
-  text-align: center;
 }
 
 .ccm-ui select, .ccm-ui input {

@@ -979,7 +979,7 @@ select {
     right: auto;
   }
 
-  .large-pull-6 {
+    col-lg-push-.large-pull-6 {
     position: relative;
     right: 50%;
     left: auto;

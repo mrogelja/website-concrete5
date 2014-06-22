@@ -4,64 +4,77 @@
 <head>
     <? Loader::element('header_required'); ?>
 
-    <link rel="stylesheet" href="<?= $this->getThemePath(); ?>/css/foundation.css"/>
+    <link rel="stylesheet" href="<?= $this->getThemePath(); ?>/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="<?= $this->getThemePath(); ?>/bower_components/bootstrap/dist/css/bootstrap-theme-cgt.min.css"/>
     <link rel="stylesheet" href="<?= $this->getThemePath(); ?>/css/fontello.css"/>
     <link rel="stylesheet" href="<?= $this->getThemePath(); ?>/css/main.css"/>
 
-    <script src="<?= $this->getThemePath(); ?>/js/modernizr.js"></script>
+    <script src="<?= $this->getThemePath(); ?>/bower_components/modernizr/modernizr.js"></script>
 </head>
 
-<body>
-<nav class="top-bar" data-topbar>
-    <ul class="title-area">
-        <li class="name">
-            <a href="<?= $this->url('/') ?>">
-                <img height="100px" src="<?= $this->getThemePath(); ?>/img/Logo-cgt.png"/>
-            </a>
-        </li>
-    </ul>
-    <section class="top-bar-section">
-        <?
-        $nav = BlockType::getByHandle('autonav');
-        $nav->controller->orderBy = 'display_asc';
-        $nav->controller->displayPages = 'top';
-        $nav->controller->displaySubPages = 'none';
-        $nav->render('view');
-        ?>
+<body data-spy="scroll" data-target=".nav-spy">
 
-        <ul class="right">
-            <li class="has-form search">
-                <?
-                    $search = BlockType::getByHandle('extended_search');
-                    $search->controller->title  = '';
-                    $search->controller->searchPlaceholder  = 'Rechercher...';
-                    $search->controller->resultsURL = 'recherche' ;
-                    $search->controller->dontDisplayResults = true;
-                    $search->render('view');
-                ?>
-            </li>
-            <li class="important">
+<header>
+    <nav class="externals">
+        <div class="container">
             <? $u = new User(); ?>
             <? if (!$u->isRegistered()) : ?>
-                <a href="<?= $this->url('/login') ?>"><?= t('Connexion') ?></a>
+                <a class="pull-right" href="<?= $this->url('/login') ?>"><?= t('Connexion') ?></a>
             <? endif ?>
-            </li>
-        </ul>
-    </section>
-    </div>
-</nav>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default" role="navigation">
 
-<header class="header">
-    <?php
-    $a = new Area('En tête');
-    $a->display($c);
-    ?>
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="<?= $this->url('/') ?>">
+                    <div class="logo">
+                        <img height="70px" src="<?= $this->getThemePath(); ?>/images/logos/cgt_tsp.png"/>
+
+                        <span>ina</span>
+                    </div>
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-collapse">
+                <form class="navbar-form" role="search">
+                    <div class="form-group">
+                        <?
+                        $search = BlockType::getByHandle('extended_search');
+                        $search->controller->title = '';
+                        $search->controller->searchPlaceholder = 'Rechercher...';
+                        $search->controller->resultsURL = 'recherche';
+                        $search->controller->dontDisplayResults = true;
+                        $search->render('view');
+                        ?>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <?
+                    $nav = BlockType::getByHandle('autonav');
+                    $nav->controller->orderBy = 'display_asc';
+                    $nav->controller->displayPages = 'top';
+                    $nav->controller->displaySubPages = 'none';
+                    $nav->render('view');
+                    ?>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
 </header>
 
 <nav class="breadcrumbs">
     <?
-        $nav = BlockType::getByHandle('swp_breadcrumbs');
-        $nav->render('view');
+    $nav = BlockType::getByHandle('swp_breadcrumbs');
+    $nav->render('view');
     ?>
 </nav>
 

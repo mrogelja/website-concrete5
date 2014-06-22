@@ -1,115 +1,142 @@
 @charset "UTF-8";
 
 @import "compass/css3";
+
 @import "vars";
+@import "bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
 
 body {
   position: relative;
   background: white;
   -webkit-font-smoothing: antialiased;
+  font-family: "Cabin";
 }
 
-.top-bar {
+a{
+  color: $primary-color;
+}
 
-  .top-bar-section {
-    .important a{
-      color: #e2353b;
-    }
 
-    .left{
-      padding-left: 5px;
-      border-left: 4px #FC5050 solid
-    }
+h1, h2{
+  margin-bottom: 30px;
+}
 
-    .search{
-      display: table;
-      width: 400px;
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Roboto Slab', serif;
+}
 
-      form{
-        display: table-cell;
-        vertical-align: middle;
+header {
+  nav.externals {
+    height: 30px;
+    background: #EEEEEE;
 
-        input{
-          top: 0;
-        }
-      }
+    a {
+      line-height: 30px;
+      color: #666;
     }
   }
+
+  font-family: 'Roboto Slab', serif;
 }
 
-header{
-  background: #e2353b;
-  height: 77px;
-  border-top: 4px #FC5050 solid;
-}
-
-nav.breadcrumbs{
+nav.breadcrumbs {
   height: 35px;
   line-height: 35px;
   background: #444;
   padding-left: 20px;
-  &, a{
+  &, a {
     color: #ededed;
   }
 }
 
-
-section#main{
+section#main {
   background: #fafafa;
   min-height: 800px;
   padding: 20px 50px;
 
-  .search-results{
-    h4{
+  .search-results {
+    h4 {
       text-align: center;
     }
   }
 
-  .ccm-page-list{
-    .page{
+  .ccm-page-list {
+    .page {
       margin-bottom: 30px;
     }
   }
 
-  .rss{
-    .item{
+  .rss {
+    .item {
       margin: 20px 0;
 
-      .date{
+      .date {
         color: grey;
         font-size: 13px;
         width: 35px;
       }
 
-      .summary{
+      .summary {
         margin-top: 10px;
         padding-left: 35px;
       }
     }
   }
 
-  .aside-menu{
-    &.fixed{
+  .aside-menu {
+    h6 {
+      font-size: 18px;
+      border-bottom: 2px solid #DDD;
+      padding-bottom: 7px;
+      color: #888;
+    }
+
+    &.affix {
       top: 50px !important;
       left: auto !important;
 
-      ul{
+      ul {
         max-width: 200px;
+      }
+    }
+
+    li {
+      border-left: 2px solid transparent;
+
+      &.active{
+        border-left-color: #AAA;
+      }
+
+      a {
+        color: #AAA;
+        font-size: 1.5rem;
+        padding: 6px 15px;
       }
     }
   }
 }
 
-footer{
-  height: 100px;
-  background: #444;
-  color: white;
-  padding: 20px;
-  text-align: center;
+footer {
+
+  .upper {
+    min-height: 250px;
+    background: #EEEEEE;
+    padding: 20px;
+    color: #888;
+  }
+
+  .lower {
+    height: 100px;
+    background: #444;
+    color: white;
+    padding: 20px;
+  }
 }
 
-
-.ccm-ui select, .ccm-ui input{
+.ccm-ui select, .ccm-ui input {
   line-height: normal;
   height: 28px;
 }

@@ -70,7 +70,7 @@
 	<?php     }
 	} ?>
 	
-	<input name="query" type="search" value="<?php   echo htmlentities($query, ENT_COMPAT, APP_CHARSET)?>" class="ccm-search-block-text" id="suggest" placeholder="<?php  echo $searchPlaceholder;?>"/>
+	<input name="query" type="search" value="<?php   echo htmlentities($query, ENT_COMPAT, APP_CHARSET)?>" class="form-control ccm-search-block-text" id="suggest" placeholder="<?php  echo $searchPlaceholder;?>"/>
 </form>
 <?php endif ?>
 
