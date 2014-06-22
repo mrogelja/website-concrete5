@@ -33,7 +33,7 @@ foreach ($page->getBlocks() as $block) {
 
 if (!empty($anchors)) : ?>
     <div class="aside-menu hidden-xs nav-spy" <? if ($this->controller->isSticky()) : ?>data-spy="affix" data-offset-top="200"<? endif ?>>
-        <? if (!empty($this->controller->getTitle())) : ?>
+        <? if ($this->controller->getTitle() != "") : ?>
         <h6><?= $this->controller->getTitle()?></h6>
         <? endif ?>
 
