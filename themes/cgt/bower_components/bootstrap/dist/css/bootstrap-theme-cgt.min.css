@@ -40,7 +40,6 @@
 .navbar-default .navbar-nav > .active > a:focus{
     color: #FFF;
     background-color: transparent;
-    border-bottom: 3px solid #FC5050;
 }
 
 .navbar .logo{

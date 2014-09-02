@@ -89,7 +89,6 @@ h2 {
 .navbar-default .navbar-nav > .active > a:focus {
   color: #FFF;
   background-color: transparent;
-  border-bottom: 3px solid #fc5050;
 }
 
 .navbar-default .navbar-collapse,
