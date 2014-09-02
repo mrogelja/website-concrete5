@@ -24,15 +24,17 @@
             <? endif ?>
         </div>
     </nav>
-    <nav class="navbar navbar-default" role="navigation">
-
+    <nav class="navbar navbar-default menu" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="<?= $this->url('/') ?>">
                     <div class="logo">
-                        <img height="70px" src="<?= $this->getThemePath(); ?>/images/logos/cgt_tsp.png"/>
-
-                        <span>ina</span>
+                        <img height="100px" src="<?= $this->getThemePath(); ?>/images/logos/cgt_tsp.png"/>
+                        <div class="title">
+                            <span><em>I</em>nstitut</span>
+                            <span><em>N</em>ational</span>
+                            <span>de l'<em>A</em>udiovisuel</span>
+                        </div>
                     </div>
                 </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -54,7 +56,7 @@
                 $search->render('view');
                 ?>
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right menu-items">
                     <?
                     $nav = BlockType::getByHandle('autonav');
                     $nav->controller->orderBy = 'display_asc';

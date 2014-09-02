@@ -58,7 +58,7 @@
 <?php    } ?><?php    echo $content; ?>
 
 <?php if (!isset($searchBarRenderedOnce)) : ?>
-<form action="<?php   echo $this->url( $resultTargetURL )?>" method="get" class="navbar-form ccm-search-block-form">
+<form action="<?php   echo $this->url( $resultTargetURL )?>" method="get" class="navbar-form ccm-search-block-form" style="float: right; width: 35%;">
     <div class="form-group">
 	<?php    if( strlen($title)>0){ ?><h3><?php   echo $title?></h3><?php    } ?>
 	
